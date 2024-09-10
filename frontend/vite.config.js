@@ -16,4 +16,5 @@ export default defineConfig({
     },
   },
   plugins: [react()],
+  base: '/Todo_App/',  // Use the subdirectory path here
 })
