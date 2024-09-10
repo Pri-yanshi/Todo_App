@@ -1,4 +1,4 @@
-backend/node_modules
+node_modules
 
 # environment variables
 .env
@@ -13,7 +13,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 frontend/node_modules
-
+dist
 dist-ssr
 *.local
 
