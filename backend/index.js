@@ -6,7 +6,7 @@ require('dotenv').config();
 const todoroute =require('./route/todo_route')
 require('./db');
 
-const PORT= process.env.PORT||3000;
+const PORT= process.env.PORT||10000;
 const app = express();
 // app.use(cors());
 app.use(express.static(path.join(__dirname,'frontend/dist')));
@@ -21,6 +21,6 @@ app.get('/',(req,res)=>{
 
 app.use(todoroute)
 app.get('*',(req,res)=>res.sendFile(path.join(__dirname,'frontend/dist/index.html')));
-app.listen(PORT, '0.0.0.0',()=>{
+app.listen(PORT,()=>{
     console.log(`server listening on: ${PORT}`)
 });
