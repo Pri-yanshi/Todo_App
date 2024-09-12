@@ -6,7 +6,7 @@ require('dotenv').config();
 const todoroute =require('./route/todo_route')
 require('./db');
 
-const PORT= process.env.PORT||10000;
+const PORT= process.env.PORT||3000;
 const app = express();
 // app.use(cors());
 app.use(express.static(path.join(__dirname,'frontend/dist')));
