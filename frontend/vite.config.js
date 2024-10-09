@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base:'/',
   build: {
     outDir: 'dist',
   },
@@ -16,5 +17,4 @@ export default defineConfig({
     },
   },
   plugins: [react()],
-  base: '/Todo_App/',  // Use the subdirectory path here
 })
