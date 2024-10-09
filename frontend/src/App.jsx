@@ -36,9 +36,9 @@ const App = () => {
     }
   }
 
-  if(error){
-    return <h1 className=' w-[250px] text-center font-bold relative top-[250px] left-[650px] border-b-2 '>! Opps Something went wrong</h1>
-  }
+  // if(error){
+  //   return <h1 className=' w-[250px] text-center font-bold relative top-[250px] left-[650px] border-b-2 '>! Opps Something went wrong</h1>
+  // }
   return (
     <>
       <div className=' w-[700px] p-2 flex flex-col items-center absolute top-20 left-[400px]'>
