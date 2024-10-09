@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://0.0.0.0:3000', // Express backend
+        target: 'https://todo-app-osou.onrender.com', // Express backend
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''), // Remove '/api' prefix from the path
       },
