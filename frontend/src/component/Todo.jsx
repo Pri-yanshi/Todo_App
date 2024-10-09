@@ -3,6 +3,7 @@ import axios from 'axios';
 import { MdOutlineCancel } from "react-icons/md";
 import {BiEdit} from 'react-icons/bi';
 import {AiFillDelete} from 'react-icons/ai';
+import { API_URL } from '../config';
 
 const Todo = ({text , id , setUpUI, }) => {
    const[isEdit, setIsEdit]=useState(false);
@@ -10,7 +11,7 @@ const Todo = ({text , id , setUpUI, }) => {
    const[originalText, setOriginalText]=useState(text);
     const deleteTodo=async()=>{
         try {
-           const result=await axios.delete(`/api/items/${id}`,) 
+           const result=await axios.delete(`${API_URL}/${id}`,) 
            console.log(result)
            if(result.status===200|| result.status===204){
             setUpUI((prev)=>!prev)
@@ -21,7 +22,7 @@ const Todo = ({text , id , setUpUI, }) => {
     }
     const updateTodo = async()=>{
       try{
-         const data= await axios.put(`/api/items/${id}`,{text:newItem})
+         const data= await axios.put(`${API_URL}/${id}`,{text:newItem})
          console.log(data)
          if(data.status===200){
             setIsEdit(false);

@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './index.css'
 import Todo from './component/Todo'
+import { API_URL } from './config';
+
+
 
 const App = () => {
   const[todos, setTodos]=useState([]);
@@ -12,7 +15,7 @@ const App = () => {
     ;(async()=>{
       try {
         setError(false)
-        const response=await axios.get('/api/items')
+        const response=await axios.get(API_URL)
         console.log(response.data);
         setTodos(response.data)
       } catch (error) {
